@@ -1,0 +1,6 @@
+rollout let's encrypt
+=====================
+
+Use Let's encrypt on FreeBSD with nginx.
+Automativ some steps and print example configs for high
+SSL/TLS security.
