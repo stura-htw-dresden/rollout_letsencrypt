@@ -81,7 +81,7 @@ then
         exit 1;
     fi
 
-    echo -e  '#!/bin/sh\nhead -c 48 /dev/urandom > /tmp/nginx_ticketkey\nnginx -s reload' > ${NGINXDIR}ticket_key.sh && chmod u+x ${NGINXDIR}ticket_key.sh
+    echo -e  '#!/bin/sh\n\nNGINXBIN=`which nginx`\nhead -c 48 /dev/urandom > /tmp/nginx_ticketkey\n$NGINXBIN -s reload' > ${NGINXDIR}ticket_key.sh && chmod u+x ${NGINXDIR}ticket_key.sh
     if [ $? -ne 0 ];
     then
         exit 1;
